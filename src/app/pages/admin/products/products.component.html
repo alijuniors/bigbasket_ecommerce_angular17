@@ -85,7 +85,7 @@
                         <label for="">Category </label>
                         <select [(ngModel)]="productObj.id" class="form-select">
                             
-                            <option *ngFor="let item of data" [value]="item.id">{{item.category}}</option>
+                            <option *ngFor="let item of data" [value]="0+1">{{item}}</option>
                           
                         </select>
                         <input type="text" [(ngModel)]="productObj.categoryId" class="form-control"/>

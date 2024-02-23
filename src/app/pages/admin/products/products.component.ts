@@ -37,11 +37,13 @@ export class ProductsComponent implements OnInit {
   getData(){
     this.service.getProduct().subscribe(data =>{
       this.data = data;
+      const unique = [...new Set(data.map((item: any) => item.category))];
+      this.data = unique;
     });
   }
   
   ngOnInit(): void {
-     this.getData(); 
+  this.getData(); 
   }
 
   
